@@ -1,0 +1,95 @@
+﻿{
+  "SwaggerEndPoints": [
+    {
+      "Key": "SalesApi",
+      "TransformByOcelotConfig":false,
+      "Config": [
+        {
+          "Name": "Sales Api",
+          "Version": "v1",
+          "Url": "http://sales-api:8090/swagger/v1/swagger.json"
+        }
+      ]
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://sales-api:8090"
+  },
+  "Routes": [
+    {
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "UpstreamPathTemplate": "/products",
+      "DownstreamPathTemplate": "/products",
+      "DownstreamScheme": "http",
+      "DownstreamHttpMethod": "GET",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "sales-api",
+          "Port": 8090
+        }
+      ]
+    },
+    {
+      "UpstreamHttpMethod": [
+        "Post"
+      ],
+      "UpstreamPathTemplate": "/products",
+      "DownstreamPathTemplate": "/products",
+      "DownstreamScheme": "http",
+      "DownstreamHttpMethod": "POST",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "sales-api",
+          "Port": 8090
+        }
+      ]
+    },
+    {
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "UpstreamPathTemplate": "/sales",
+      "DownstreamPathTemplate": "/sales",
+      "DownstreamScheme": "http",
+      "DownstreamHttpMethod": "GET",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "sales-api",
+          "Port": 8090
+        }
+      ]
+    },
+    {
+      "UpstreamHttpMethod": [
+        "Post"
+      ],
+      "UpstreamPathTemplate": "/sales/",
+      "DownstreamPathTemplate": "/sales",
+      "DownstreamScheme": "http",
+      "DownstreamHttpMethod": "POST",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "sales-api",
+          "Port": 8090
+        }
+      ]
+    },
+    {
+      "UpstreamHttpMethod": [
+        "Delete"
+      ],
+      "UpstreamPathTemplate": "/sales/{id}",
+      "DownstreamPathTemplate": "/sales/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHttpMethod": "DELETE",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "sales-api",
+          "Port": 8090
+        }
+      ]
+    }
+  ]
+}
